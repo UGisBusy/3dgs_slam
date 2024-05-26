@@ -162,15 +162,14 @@ cython_debug/
 # dataset
 dataset
 
-# ORB_SLAM3 testing
-Datasets
+# ORB_SLAM3
+CameraTrajectory.txt
+KeyFrameTrajectory.txt
 ORB_SLAM3
+Pangolin
 
 
 # depth anything checkpoint
 src/depth_estimator/depth_anything/checkpoints/*
 !src/depth_estimator/depth_anything/checkpoints/.gitkeep
 
-
-ORB_SLAM3
-Pangolin

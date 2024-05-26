@@ -19,6 +19,7 @@ docker run -it --rm -e  "DISPLAY=$DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix -v .
 cd ./src/gaussian
 python3 setup.py install
 ```
+
 test depth estimator
 1. create dataset/data dir and dataset/result dir
 2. put ur demo images in dataset/data
@@ -30,3 +31,18 @@ docker build  -t 3dgs_slam:0.1.0 .
 docker run -it --rm -e  "DISPLAY=$DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix -v ./:/app --privileged --gpus all 3dgs_slam:0.1.0 bash
 python3 src/depth_estimator/run.py
 ```
+
+ug note
+to build orbslam3
+apt-get install libboost-all-dev
+sudo apt-get install libssl-dev
+cd ORB_SLAM3
+rm -rf build
+./build.sh
+
+./ORB_SLAM3/Examples/Monocular/mono_euroc \
+ORB_SLAM3/Vocabulary/ORBvoc.txt \
+ORB_SLAM3/Examples/Monocular/EuRoC.yaml \
+dataset/EuRoc/MH01/ \
+ORB_SLAM3/Examples/Monocular/EuRoC_TimeStamps/MH01.txt
+
