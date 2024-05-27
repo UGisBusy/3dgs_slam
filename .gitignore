@@ -162,6 +162,9 @@ cython_debug/
 # dataset
 dataset
 
+# vscode settings
+.vscode
+
 # ORB_SLAM3
 CameraTrajectory.txt
 KeyFrameTrajectory.txt
@@ -173,3 +176,4 @@ Pangolin
 src/depth_estimator/depth_anything/checkpoints/*
 !src/depth_estimator/depth_anything/checkpoints/.gitkeep
 
+/bin
